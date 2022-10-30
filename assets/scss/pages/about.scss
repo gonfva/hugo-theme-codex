@@ -46,11 +46,17 @@
 }
 
 /* overrides */
-
 main {
-  padding-top: 0;
-  padding-bottom: 0;
+  padding: 3rem 1.5rem 1rem;
   height: 100%;
+
+  @media screen and (min-width: $medium) {
+    padding-left: calc(1.5rem + #{$navWidth});
+  }
+
+  @media screen and (max-width: $medium - 1) {
+    padding-top: calc(3rem + #{$burgerContainerHeight});
+  }
 }
 
 .social-icons {
